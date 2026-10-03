@@ -3203,4 +3203,110 @@ h1, h2, h3, h4, h5, h6 {
   color: #34A853;
 }
 
+/* --- Brain Dump Modal Layout & Components --- */
+
+/* Missing Utility Classes used by Brain Dump */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-2 { gap: 8px; }
+.gap-4 { gap: 16px; }
+.p-3 { padding: 12px; }
+.mb-0 { margin-bottom: 0px; }
+.mb-1 { margin-bottom: 4px; }
+.mb-2 { margin-bottom: 8px; }
+.mb-3 { margin-bottom: 12px; }
+.mb-4 { margin-bottom: 16px; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.items-center { align-items: center; }
+.text-xs { font-size: 12px; }
+.text-sm { font-size: 13px; }
+.font-semibold { font-weight: 600; }
+.font-mono { font-family: var(--font-mono); }
+.text-secondary { color: var(--text-secondary); }
+.block { display: block; }
+.w-full { width: 100%; }
+
+/* Brain Dump Specific Component Classes */
+.brain-dump-days-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.day-circle-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-card);
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.day-circle-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-subtle);
+  transform: translateY(-1px);
+}
+
+.day-circle-toggle.day-active {
+  background: #ffffff;
+  color: #070b14;
+  border-color: #ffffff;
+  opacity: 1;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.day-circle-toggle.day-active:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25);
+}
+
+.day-circle-toggle.day-crossed-out {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px dashed var(--border-card);
+  opacity: 0.4;
+}
+
+.day-circle-toggle .day-letter {
+  z-index: 2;
+}
+
+.day-circle-toggle .day-today-dot {
+  position: absolute;
+  bottom: 6px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 4px var(--accent);
+}
+
+.label-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
 
