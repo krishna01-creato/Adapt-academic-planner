@@ -2,8 +2,6 @@ const CACHE_NAME = 'adapt-cache-v2';
 const urlsToCache = [
   './',
   './index.html',
-  './styles.css',
-  './app.js',
   './manifest.json'
 ];
 
